@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+$color1: rgb(46, 190, 111);
+$font1:'Anton';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.bg-primary{
+    background-image: url(img/portada1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.presentacion{
+    height: 600px;
+    color:rgb(46, 190, 111) ;
+    font-family: $font1;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @mixin text ($text-shadow, $text-align){
+        text-shadow:$text-shadow ;
+        text-align: $text-align;
+
+    }
+
+    h1{
+        @include text(-3px 2px rgba(2, 99, 34, 0.479),center)
+    }
+
+    p{
+        @include text (-2px 2px rgba(37, 77, 41, 0.925),center)
+    }
+}
+
+.btn{
+    background-color: rgba(216, 43, 78, 0.856);
+    box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.46);
+    margin-bottom: 0.2em;
+}
+
+h3{
+    margin-top: 0.1em;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+$redes: (
+    /* Declaramos nuestro mapa*/
+    red1: 20px,
+    red2: 40px,
+    red3: 10px,
+); 
+
+@each $red, $size in $redes {
+    .botn--#{$red} {
+    background-image:url(img/logo1.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 200px;
+    width: 400px;
+    margin-left: 0.4em;
+    border: 2px solid #111;
+    text-align:center;
+    font-size: $size;
+    line-height: 200px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgb(0, 187, 56);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius:10px;
+    }
+}
+
+footer{
+    background-color: rgb(46, 190, 111);
+    padding: 1em;
+    margin-top: 2em;
+    
+}
+
+.redes li{
+    width: 50px;
+    list-style: none;
+}
+
+
+.titulo{
+    text-align: center;
+    font-family: 'Anton';
+    letter-spacing: 0.1em;
+    background-color: rgba(238, 38, 78, 0.644);
+    margin-bottom: -0.1px;
+}
+
+.nosotros{
+    height: 600px;
+    margin: auto;
+}
+
+.nright{
+    background-image: url(img/galeria1.webp);
+    background-position: center;
+    background-size: cover;
+}
+
